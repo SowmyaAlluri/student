@@ -28,8 +28,8 @@ couch.listDatabases().then((dbs) => {
 
 
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }))
+// app.use(bodyParser.json());
+// app.use(bodyParser.urlencoded({ extended: false }))
 
 
 //list of all documents
@@ -60,8 +60,6 @@ const mangoQuery = {
                 }
             }
         ]
-
-
     }
 
 };
@@ -146,12 +144,6 @@ app.delete("/delete",  (req, res) => {
       },
     );
   });
-
-
-
-
-
-
 
 app.listen(3000, () => {
     console.log('server started');
